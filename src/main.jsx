@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import Home from "./containers/Home/index.jsx";
+import Users from "./containers/Users";
 import GlobalStyle from "./globalStyle";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <App /> <GlobalStyle />
+    <Users /> <GlobalStyle />
   </>
 );
