@@ -5,7 +5,11 @@ import Arrow from "../../assets/arrow.svg";
 import Trash from "../../assets/trash.svg";
 import axios from "axios";
 
-import { Container, Imagem, ContainerItens, H1, Button, User } from "./styles";
+import H1 from "../../components/Title";
+import ContainerItens from "../../components/ContainerItens";
+import Button from "../../components/Button";
+
+import { Container, Imagem, User } from "./styles";
 
 function Users() {
   const [users, setUsers] = useState([]);
@@ -33,7 +37,7 @@ function Users() {
   return (
     <Container>
       <Imagem alt="logo-imagem" src={avatar} className="logo" />
-      <ContainerItens>
+      <ContainerItens isBlur={true}>
         <H1>Usuários</H1>
 
         <ul>
@@ -48,7 +52,7 @@ function Users() {
           ))}
         </ul>
 
-        <Button onClick={goBackPage}>
+        <Button isBack={true} onClick={goBackPage}>
           <img src={Arrow} alt="seta" />
           Voltar
         </Button>

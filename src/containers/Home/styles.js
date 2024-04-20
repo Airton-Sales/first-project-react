@@ -14,30 +14,7 @@ export const Container = styled.div`
 export const Imagem = styled.img`
   margin-top: 40px;
 `;
-export const ContainerItens = styled.div`
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding: 50px 35px;
-  border-radius: 61px 61px 0px 0px;
-  opacity: 0px;
-  background: linear-gradient(
-    157.44deg,
-    rgba(255, 255, 255, 0.6) 0.84%,
-    rgba(255, 255, 255, 0.6) 0.85%,
-    rgba(255, 255, 255, 0.15) 100%
-  );
-`;
 
-export const H1 = styled.h1`
-  margin-bottom: 80px;
-  font-family: Roboto;
-  font-size: 34px;
-  font-weight: 700;
-  line-height: 39.84px;
-  text-align: center;
-  color: rgba(255, 255, 255, 1);
-`;
 export const InputLabel = styled.p`
   font-family: Roboto;
   font-size: 18px;
@@ -70,31 +47,5 @@ export const Input = styled.input`
   margin-bottom: 34px;
 `;
 
-export const Button = styled.button`
-  width: 342px;
-  height: 74px;
-  border-radius: 14px;
-  margin-top: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-
-  background: rgba(0, 0, 0, 0.8);
-  
-  font-style: normal;
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 28px;
-
-  color: rgba(255, 255, 255, 1);
-  cursor: pointer;
-  &:hover {
-      opacity:0.8
-  }
-  &:active {
-      opacity: 0.5;
-  }
-`;
 
 
