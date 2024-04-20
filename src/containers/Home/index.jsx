@@ -1,7 +1,10 @@
 import React, { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+
+import axios from "axios";
+
 import People from "../../assets/people.svg";
 import Arrow from "../../assets/arrow.svg";
-import axios from "axios";
 
 import {
   Container,
@@ -15,6 +18,7 @@ import {
 
 function App() {
   const [users, setUsers] = useState([]);
+  const navigate = useNavigate();
   const inputName = useRef();
   const inputAge = useRef();
 
@@ -24,13 +28,9 @@ function App() {
       age: inputAge.current.value,
     });
 
-    console.log(newUser);
-
     setUsers([newUser, ...users]);
-    if (inputName.current.value && inputAge.current.value) {
-      inputName.current.value = "";
-      inputAge.current.value = "";
-    }
+
+    navigate("/users");
   }
 
   return (
@@ -38,13 +38,10 @@ function App() {
       <Imagem alt="logo-imagem" src={People} className="logo" />
       <ContainerItens>
         <H1>Olá!</H1>
-
         <InputLabel>Nome</InputLabel>
         <Input ref={inputName} placeholder="Nome" />
-
         <InputLabel>Idade</InputLabel>
         <Input ref={inputAge} placeholder="Idade" />
-
         <Button onClick={addNewUser}>
           Cadastrar <img src={Arrow} alt="seta" />
         </Button>
